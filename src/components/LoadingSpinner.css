@@ -1,0 +1,81 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: 20px;
+}
+
+.spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.orbit {
+  position: absolute;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 50%;
+  animation: rotate 3s linear infinite;
+}
+
+.orbit:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+.orbit-2 {
+  width: 70px;
+  height: 70px;
+  top: 15px;
+  left: 15px;
+  animation-duration: 2s;
+  animation-direction: reverse;
+}
+
+.orbit-3 {
+  width: 40px;
+  height: 40px;
+  top: 30px;
+  left: 30px;
+  animation-duration: 1.5s;
+}
+
+.planet {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #667eea;
+  border-radius: 50%;
+  top: -4px;
+  left: calc(50% - 4px);
+  box-shadow: 0 0 10px #667eea;
+}
+
+.planet-2 {
+  background: #764ba2;
+  box-shadow: 0 0 10px #764ba2;
+}
+
+.planet-3 {
+  background: #f093fb;
+  box-shadow: 0 0 10px #f093fb;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-message {
+  color: #cccccc;
+  font-size: 16px;
+  text-align: center;
+}
